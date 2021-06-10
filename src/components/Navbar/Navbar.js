@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.css"
+import "./Navbar.css";
 
 import { connect } from "react-redux";
 
@@ -15,6 +15,10 @@ function Navbar({ cart }) {
 
     setCartCount(count);
   }, [cart, cartCount]);
+
+  const handleClick = () => {
+    localStorage.clear();
+  };
 
   return (
     <>
@@ -56,6 +60,15 @@ function Navbar({ cart }) {
                     Register
                   </a>
                 </li>
+                {/* <li className="nav-item">
+                  <a
+                    className="nav-products nav-link active"
+                    aria-current="page"
+                    onClick={handleClick}
+                  >
+                    Logout
+                  </a>
+                </li> */}
                 <li className="nav-item">
                   <a
                     className="nav-link active"
@@ -63,7 +76,8 @@ function Navbar({ cart }) {
                     href="my-cart"
                   >
                     <NavLink className="nav-link" to="/cart">
-                      <i class="fab fa-opencart"></i> <span className="cart-count">{cartCount}</span>
+                      <i class="fab fa-opencart"></i>{" "}
+                      <span className="cart-count">{cartCount}</span>
                     </NavLink>
                   </a>
                 </li>

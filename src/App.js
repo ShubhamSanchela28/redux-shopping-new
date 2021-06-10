@@ -13,6 +13,7 @@ import Products from "./components/Products/Products";
 import { connect } from "react-redux";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 function App({ currentItem }) {
   return (
@@ -20,8 +21,8 @@ function App({ currentItem }) {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path="/products" component={Products} />
-          <Route exact path="/cart" component={Cart} />
+          <PrivateRoute exact path="/products" component={Products} />
+          <PrivateRoute exact path="/cart" component={Cart} />
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
           {!currentItem ? (

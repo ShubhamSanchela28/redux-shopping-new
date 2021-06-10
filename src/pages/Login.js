@@ -66,7 +66,7 @@ function Login() {
                 <div className="form-group">
                   <label htmlFor="">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     value={login.email}
                     onChange={handleLoginChange}
@@ -88,6 +88,10 @@ function Login() {
                   value="Login"
                   className="btn btn-primary mt-4"
                 />
+                <p>
+                  {" "}
+                  Register<a href="/register"> Now? </a>
+                </p>
               </form>
             </div>
             <div className="card-footer">

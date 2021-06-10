@@ -53,7 +53,7 @@ function Register() {
                 <div className="form-group">
                   <label htmlFor="">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     value={state.email}
                     onChange={handleInputChange}
@@ -75,6 +75,9 @@ function Register() {
                   value="SignUp"
                   className="btn btn-primary mt-4"
                 />
+                <p>
+                  Already have account ?<a href="/login"> Sign in</a>
+                </p>
               </form>
             </div>
             <div className="card-footer">
