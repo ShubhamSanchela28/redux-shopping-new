@@ -1,0 +1,14 @@
+.item-img{
+    width: 800px;
+    padding: 80px;
+}
+
+.title{
+    font-size: 40px;
+}
+.description{
+    font-size: 20px;
+}
+.price{
+    size: 20px;
+}
