@@ -14,8 +14,16 @@ import { connect } from "react-redux";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import Cookie from "js-cookie"
+import { useEffect } from "react";
 
 function App({ currentItem }) {
+
+  useEffect(() => {
+    const token =  Cookie.get("token") ? Cookie.get("token") : null;
+    Cookie.set("token", token);
+  })
+
   return (
     <Router>
       <div className="App">

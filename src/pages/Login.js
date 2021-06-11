@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Cookie from "js-cookie"
+import { useEffect } from "react";
+import Cookies from "js-cookie";
 
 function Login() {
   const history = useHistory();
@@ -7,6 +10,11 @@ function Login() {
     email: "",
     password: "",
   });
+
+  // useEffect(() => {
+  //   const token =  Cookie.get("token") ? Cookie.get("token") : null;
+  //   Cookie.set("token", token);
+  // })
 
   const handleLoginChange = (event) => {
     setLogin((prevProps) => ({
@@ -31,7 +39,6 @@ function Login() {
   //     history.push("/products");
   //   }
   // };
-
   const onSubmit = (e) => {
     e.preventDefault();
     const loginEmail = login.email;

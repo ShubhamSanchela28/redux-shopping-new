@@ -34,7 +34,11 @@ function Register() {
       password: state.password,
     };
     storedUsers.push(userData);
+    console.log(userData)
     localStorage.setItem("UsersLogin", JSON.stringify(storedUsers));
+    const id = '_' + Math.random().toString(36).substr(2, 9);
+    localStorage.setItem("token",id)
+    console.log(id)
     console.log("Registration Successfull!!");
     setState({ email: "", password: "" });
     history.push("/");

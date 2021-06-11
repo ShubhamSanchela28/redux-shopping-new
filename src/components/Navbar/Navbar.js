@@ -17,7 +17,7 @@ function Navbar({ cart }) {
   }, [cart, cartCount]);
 
   const handleClick = () => {
-    localStorage.clear();
+    localStorage.removeItem("UsersLogin");
   };
 
   return (
@@ -60,7 +60,7 @@ function Navbar({ cart }) {
                     Register
                   </a>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                   <a
                     className="nav-products nav-link active"
                     aria-current="page"
@@ -68,7 +68,7 @@ function Navbar({ cart }) {
                   >
                     Logout
                   </a>
-                </li> */}
+                </li>
                 <li className="nav-item">
                   <a
                     className="nav-link active"

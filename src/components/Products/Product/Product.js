@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Product.css"
 
@@ -7,9 +7,14 @@ import {
   addToCart, loadCurrentItem
 } from "../../../redux/Shopping/shopping-action";
 
-const Product = ({ product, addToCart, loadCurrentItem }) => {
-  console.log(loadCurrentItem)
+const Product = ({ product, addToCart, loadCurrentItem, cart }) => {
+  console.log(cart)
   console.log(product)
+
+
+  useEffect(() => {
+    // localStorage.setItem("cart", JSON.stringify(cart))
+  },[])
   return (
     <div >
       <img
@@ -33,9 +38,9 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
           </button>
         </Link>
         <button
-        className="product-btn"
-         onClick={() => addToCart(product.id)}
-          
+          className="product-btn"
+          onClick={() => addToCart(product.id)}
+
         >
           Add To Cart
         </button>
@@ -45,10 +50,16 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-      addToCart: (id) => dispatch(addToCart(id)),
-      loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
-    };
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
   };
+};
 
-  export default connect(null, mapDispatchToProps)(Product);
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

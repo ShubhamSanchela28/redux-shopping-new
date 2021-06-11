@@ -5,23 +5,35 @@ import { connect } from "react-redux";
 import CartItem from "./CartItem/CartItem";
 
 function Cart({ cart }) {
-    console.log(cart)
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [totalItems, setTotalItems] = useState(0);
-  
-    useEffect(() => {
-      let items = 0;
-      let price = 0;
-  
-      cart.forEach((item) => {
-        items += item.qty;
-        price += item.qty * item.price;
-      });
-  
-      setTotalItems(items);
-      setTotalPrice(price);
-    }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
-  
+  console.log(cart)
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
+  const [cartData, setCartData] = useState(cart, () => {
+    const localData = localStorage.getItem("cartData")
+    console.log(localData, ">>>>>>>>>>>>data cart")
+    return localData ? JSON.parse(localData) : []
+  })
+
+  useEffect(() => {
+    let items = 0;
+    let price = 0;
+
+    cart.forEach((item) => {
+      items += item.qty;
+      price += item.qty * item.price;
+    });
+
+    setTotalItems(items);
+    setTotalPrice(price);
+    localStorage.setItem("cartData", JSON.stringify(cartData))
+    const cardta = localStorage.setItem("token", JSON.stringify(cartData))
+    console.log(cartData)
+    // const find = cardta.find(o => o.id)
+    // console.log(find)
+   const find = cartData.find(o => o.id > 0)
+   console.log(find)
+  }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
+
   return (
     <div >
       <div className="shopping-cart">
@@ -44,9 +56,9 @@ function Cart({ cart }) {
 }
 
 const mapStateToProps = (state) => {
-    return {
-      cart: state.shop.cart,
-    };
+  return {
+    cart: state.shop.cart,
   };
-  
-  export default connect(mapStateToProps)(Cart);
+};
+
+export default connect(mapStateToProps)(Cart);
