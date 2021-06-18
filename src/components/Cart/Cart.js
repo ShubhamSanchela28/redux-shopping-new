@@ -9,6 +9,7 @@ function Cart({ cart }) {
   const [cartData, setCartData] = useState([])
 
   console.log(cartData)
+
   useEffect(() => {
     let items = 0;
     let price = 0;
@@ -20,6 +21,8 @@ function Cart({ cart }) {
 
     setTotalItems(items);
     setTotalPrice(price);
+
+
 
     // if (cartData.length) {
     //   localStorage.setItem("cartData", JSON.stringify(cartData))

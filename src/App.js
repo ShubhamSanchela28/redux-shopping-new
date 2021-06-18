@@ -19,6 +19,7 @@ import AuthAPi from "./AuthApi"
 import { useState } from "react";
 import { useContext } from "react";
 import AuthApi from "./AuthApi";
+import Footer from "./components/Footer/Footer";
 
 function App({ currentItem }) {
   const [auth, setAuth] = useState(false)
@@ -49,6 +50,7 @@ function App({ currentItem }) {
             )}
           </Switch> */}
           <Routes />
+          <Footer />
         </div>
       </Router>
     </AuthAPi.Provider>

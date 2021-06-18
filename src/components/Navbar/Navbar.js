@@ -90,7 +90,7 @@ function Navbar({ cart, setAuth }) {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <a class="navbar-brand" href="/products" >E-Cart Shopping</a>
-            <a class="navbar-brand" href="/products" >{userDetail ? <div>Hello, {userDetail}</div> : null}</a>
+            <a class="navbar-brand" href="/products" >{userDetail ? <div><i class="fas fa-user-circle"></i> {userDetail}</div> : null}</a>
             <div class="d-flex">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item ">

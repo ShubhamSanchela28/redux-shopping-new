@@ -12,3 +12,7 @@
   .nav-products{
     margin-top: 9px;
   }
+.navbar{
+  position: relative;
+  width: 100%;
+}
