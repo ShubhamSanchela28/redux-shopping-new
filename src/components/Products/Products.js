@@ -4,8 +4,10 @@ import "./Products.css"
 // Redux
 import { connect } from "react-redux";
 
-import  Product  from "./Product/Product"
+import Product from "./Product/Product"
+import { useEffect } from "react";
 const Products = ({ products }) => {
+
   return (
     <div className="products-container">
       {products.map((product) => (

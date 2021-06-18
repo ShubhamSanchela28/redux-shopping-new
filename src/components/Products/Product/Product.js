@@ -6,14 +6,14 @@ import { connect } from "react-redux";
 import {
   addToCart, loadCurrentItem
 } from "../../../redux/Shopping/shopping-action";
+import Cookies from "js-cookie";
 
-const Product = ({ product, addToCart, loadCurrentItem, cart }) => {
+const Product = ({ product, addToCart, loadCurrentItem, cart, onLoad }) => {
   console.log(cart)
   console.log(product)
 
 
   useEffect(() => {
-    // localStorage.setItem("cart", JSON.stringify(cart))
   },[])
   return (
     <div >
