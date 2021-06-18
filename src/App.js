@@ -20,6 +20,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import AuthApi from "./AuthApi";
 import Footer from "./components/Footer/Footer";
+import Checkout from "./components/Checkout/Checkout";
 
 function App({ currentItem }) {
   const [auth, setAuth] = useState(false)
@@ -84,6 +85,7 @@ const Routes = ({ currentItem }) => {
         <Route exact path="/product/:id" component={SingleItem} />
       )}
       <Route exact path="/cart" component={Cart} />
+      <Route exact path="/checkout" component={Checkout} />
       <Route exact path="/" component={Login} />
     </Switch>
   );

@@ -97,7 +97,7 @@ function Navbar({ cart, setAuth }) {
                   {!Cookies.get("user") ? null : <a
                     className="nav-link active"
                     aria-current="page"
-                    href="my-cart"
+                    href="/cart"
                   >
                     <NavLink className="nav-link " to="/cart">
                       <i class="fab fa-opencart"></i>{" "}

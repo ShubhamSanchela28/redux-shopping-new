@@ -61,9 +61,12 @@ p {
   background: transparent;
   border-radius: 5px;
   padding: 10px;
-  color: red;
+  color: rgb(87, 83, 83)(158, 153, 153);
 }
 .checkout-btn:hover {
   background: black;
   color: white;
+}
+.cart-empty{
+  font-size: 50px;
 }
