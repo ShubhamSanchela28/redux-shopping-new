@@ -11,21 +11,24 @@ import {
 } from "react-router-dom";
 import Checkout from "../Checkout/Checkout";
 
+
 function Cart({ cart }) {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
   // const [cartData, setCartData] = useState([])
 
   // console.log(cartData)
+  console.log("hhhhhhhhhhhhhhhhhhh", cart)
 
   useEffect(() => {
     let items = 0;
     let price = 0;
 
-    cart.forEach((item) => {
-      items += item.qty;
-      price += item.qty * item.price;
-    });
+      cart.forEach((item) => {
+        items += item.qty;
+        price += item.qty * item.price;
+      });
+
 
     setTotalItems(items);
     setTotalPrice(price);
@@ -73,8 +76,8 @@ function Cart({ cart }) {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.shop.cart,
+    cart: state.cart.cart,
   };
 };
 
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps,)(Cart);

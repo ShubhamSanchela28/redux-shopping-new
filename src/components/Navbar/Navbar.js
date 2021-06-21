@@ -18,9 +18,11 @@ function Navbar({ cart, setAuth }) {
 
   useEffect(() => {
     let count = 0;
+    if(cart){
     cart.forEach((item) => {
       count += item.qty;
     });
+  }
 
     setCartCount(count);
 
@@ -127,7 +129,7 @@ function Navbar({ cart, setAuth }) {
 }
 const mapStateToProps = (state) => {
   return {
-    cart: state.shop.cart,
+    cart: state.cart.cart,
   };
 };
 

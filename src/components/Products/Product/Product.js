@@ -4,14 +4,16 @@ import "./Product.css"
 
 import { connect } from "react-redux";
 import {
-  addToCart, loadCurrentItem
+  loadCurrentItem
 } from "../../../redux/Shopping/shopping-action";
+import {
+  addToCart
+} from "../../../redux/Shopping/cart-action";
 import Cookies from "js-cookie";
 
 const Product = ({ product, addToCart, loadCurrentItem, cart, onLoad }) => {
   console.log(cart)
   console.log(product)
-
 
   useEffect(() => {
   },[])
@@ -58,7 +60,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.shop.cart,
+    cart: state.cart.cart,
   };
 };
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SingleItem.css"
 import { connect } from "react-redux";
-import { addToCart } from "../../redux/Shopping/shopping-action";
+import { addToCart } from "../../redux/Shopping/cart-action";
 
 function SingleItem({ currentItem, addToCart }) {
     console.log(currentItem)

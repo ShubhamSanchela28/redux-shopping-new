@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { connect } from "react-redux";
-import { adjustItemQty, removeFromCart } from '../../redux/Shopping/shopping-action';
+import { adjustItemQty, removeFromCart } from '../../redux/Shopping/cart-action';
 import StripeCheckout from 'react-stripe-checkout';
 
 function Checkout({ cart, removeFromCart }) {
@@ -81,7 +81,7 @@ function Checkout({ cart, removeFromCart }) {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.shop.cart,
+        cart: state.cart.cart,
     };
 };
 

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   adjustItemQty,
   removeFromCart,
-} from "../../../redux/Shopping/shopping-action";
+} from "../../../redux/Shopping/cart-action";
 
 function CartItem({ item, adjustQty, removeFromCart }) {
   const [input, setInput] = useState(item.qty);
