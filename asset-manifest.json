@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/redux-shopping-new/static/css/main.c9958f9e.chunk.css",
+    "main.js": "/redux-shopping-new/static/js/main.c23dd1b9.chunk.js",
+    "main.js.map": "/redux-shopping-new/static/js/main.c23dd1b9.chunk.js.map",
+    "runtime-main.js": "/redux-shopping-new/static/js/runtime-main.de5730b9.js",
+    "runtime-main.js.map": "/redux-shopping-new/static/js/runtime-main.de5730b9.js.map",
+    "static/js/2.a902faba.chunk.js": "/redux-shopping-new/static/js/2.a902faba.chunk.js",
+    "static/js/2.a902faba.chunk.js.map": "/redux-shopping-new/static/js/2.a902faba.chunk.js.map",
+    "static/js/3.55a03e71.chunk.js": "/redux-shopping-new/static/js/3.55a03e71.chunk.js",
+    "static/js/3.55a03e71.chunk.js.map": "/redux-shopping-new/static/js/3.55a03e71.chunk.js.map",
+    "index.html": "/redux-shopping-new/index.html",
+    "static/css/main.c9958f9e.chunk.css.map": "/redux-shopping-new/static/css/main.c9958f9e.chunk.css.map",
+    "static/js/2.a902faba.chunk.js.LICENSE.txt": "/redux-shopping-new/static/js/2.a902faba.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de5730b9.js",
+    "static/js/2.a902faba.chunk.js",
+    "static/css/main.c9958f9e.chunk.css",
+    "static/js/main.c23dd1b9.chunk.js"
+  ]
+}
